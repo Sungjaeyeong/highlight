@@ -34,12 +34,12 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-const { color, highlight, page, user } = sequelize.models;
+const { Color, Highlight, Page, User } = sequelize.models;
 
-user.hasMany(highlight);
-highlight.belognsTo(user);
+User.hasMany(Highlight);
+Highlight.belongsTo(User);
 
-page.hasOne(highlight);
-highlight.belongsTo(page);
+Page.hasOne(Highlight);
+Highlight.belongsTo(Page);
 
 module.exports = db;
