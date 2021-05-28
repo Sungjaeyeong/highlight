@@ -39,7 +39,7 @@ const { Color, Highlight, Page, User } = sequelize.models;
 User.hasMany(Highlight);
 Highlight.belongsTo(User);
 
-Page.hasOne(Highlight);
+Page.hasMany(Highlight, {as: 'highlights'});
 Highlight.belongsTo(Page);
 
 module.exports = db;

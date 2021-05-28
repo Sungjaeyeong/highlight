@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { Color, Highlight, Page, User } = require('../models');
+const { Highlight, Page } = require('../models');
 
 // 1. 하이라이트 저장(Create)
 router.post('/', async (req, res) => {
